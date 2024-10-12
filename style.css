@@ -1,0 +1,311 @@
+/* Fuentes:
+
+.libre-baskerville-regular {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.libre-baskerville-bold {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.libre-baskerville-regular-italic {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+<uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 100 to 700
+
+.roboto-mono-<uniquifier> {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+*/
+
+/* NORMALIZACIÓN: override de las características por default */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /* para mantener width & height a pesar de padding y border */
+  font-family: "Libre Baskerville", serif;
+  list-style: none; /* para quitar los puntos de decoración de listas */
+  text-decoration: none; /* para quitar el subrayado de los links */
+  color: white; /* una normalización habitual */
+}
+
+body {
+  background-color: black; /* TODO: borrar cuando tengamos el fondo final*/
+}
+
+header {
+  position: fixed; /* para que el header quede fijo arriba */
+  right: 0;
+  top: 0;
+  z-index: 100; /* para que el header se muestre por encima */
+  width: 100%;
+  display: flex; /* para que el header se ponga en línea */
+  align-items: center; /* centra verticalmente por flex-row */
+  justify-content: space-between; /* para que estén esquinados */
+  padding: 15px 3%;
+  background-color: transparent;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700; /* grueso de las letras */
+}
+
+.navlist {
+  display: flex; /* para que los elementos se pongan en línea */
+}
+
+.navlist a {
+  margin-left: 60px; /* para separar los links */
+  font-size: 15px;
+  font-weight: 500;
+  border-bottom: 2px solid transparent; /* subrayado transparente */
+  transition: all 0.5s ease; /* para transicionar todas las características */
+}
+
+.navlist a:hover {
+  border-bottom: 2px solid white; /* subrayado blanco cuando hover */
+}
+
+#menu-icon {
+  display: none; /* en none sólo para que se vea cuando se colapse la web */
+}
+
+#menu-icon {
+  font-size: 40px;
+  z-index: 101; /* para que esté por encima de la barra del header */
+  cursor: pointer; /* para que cambie el cursor en el hover */
+}
+
+#menu-toggle {
+  display: none; /* para que NUNCA se vea */
+}
+
+#menu-icon-action {
+  display: none; /* para que no se le pueda hacer click */
+}
+
+.hero {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh; /* que SIEMPRE ocupe lo que se ve (la altura del viewport */
+  background: linear-gradient(245.59deg, #31494e 0%, #385e70 25%, #131313 75%);
+  position: relative; /* para que sea relativo al contenedor y poder usar top, bottom, left y right */
+  display: grid; /* para poder utilizar columnas */
+  grid-template-columns: 1fr 1fr; /* definimos dos columnas, una para el texto y otra para la foto */
+  align-items: center; /* se centran de forma vertical */
+  gap: 2rem; /* para que haya espacio entre las columnas */
+  margin-left: 40px;
+}
+
+section {
+  padding: 0 8%; /* nada vertical, algo separado horizontal */
+}
+
+.hero-text h5 {
+  font-size: 14px;
+  font-weight: 400;
+
+  margin-bottom: 25px;
+}
+
+.hero-text h4 {
+  font-size: 18px;
+  font-weight: 600;
+
+  margin-bottom: 15px;
+}
+
+.hero-text h1 {
+  font-family: "Roboto Mono", monospace;
+  font-size: 25px;
+  line-height: 1;
+  margin: 0 0 30px;
+}
+
+.hero-text p {
+  font-size: 80%; /* el 80% del contenedor padre */
+  margin-bottom: 40px;
+  line-height: 1.9;
+}
+
+.hero-img img {
+  width: 450px;
+  margin: 10% 0 0 10%;
+  height: auto;
+  transition: all 0.5s linear;
+}
+
+.hero-img img:hover {
+  width: 500px;
+  opacity: 0.6;
+}
+
+.hero-text a {
+  display: inline-block; /* para que se le pueda dar ancho y alto */
+  background-color: #4d4d4d;
+  border: 1px solid transparent;
+  padding: 15px 30px;
+  line-height: 1.4;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 25px;
+  text-transform: uppercase; /* todo mayúsculas */
+  transition: all 0.5s ease;
+}
+
+.hero-text a:hover {
+  background-color: transparent;
+  border: 1px solid white;
+  transform: translateX(8px);
+}
+
+.hero-text a.portfolio {
+  background-color: transparent;
+  border: 1px solid white;
+  margin-left: 20px;
+}
+
+.hero-text a.portfolio i {
+  vertical-align: middle;
+  margin-right: 9px;
+}
+
+.icons {
+  position: absolute;
+  top: 50vh;
+  padding: 0 4%;
+  transform: translateY(-50%);
+}
+
+.icons i {
+  display: block;
+  margin: 26px 0;
+  font-size: 40px;
+  transition: all 0.5 ease;
+}
+
+.icons i:hover {
+  color: #4d4d4d;
+  transform: translateY(-5px);
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 6%;
+  right: 3%;
+}
+
+.scroll-down i {
+  display: block;
+  padding: 12px;
+  font-size: 35px;
+  background-color: #21383d;
+  align-content: center;
+  border-radius: 30px;
+  transition: all 0.5s ease;
+}
+
+.scroll-down i:hover {
+  transform: translateY(-5px);
+}
+
+/* ACÁ TERMINÓ LA PÁGINA WEB PARA PC */
+/* Ahora hay que hacerla adaptive con los media queries */
+
+/* ESTO ES PARA TABLET */
+@media (max-width: 992px) {
+  section {
+    padding: 0% 3%;
+    transition: 0.2s;
+  }
+
+  .hero-text {
+    padding-top: 0;
+  }
+
+  .hero-img {
+    text-align: center;
+  }
+
+  .hero-img img {
+    width: 80%;
+    margin: 10% 0 0 10%;
+  }
+
+  .hero-text p {
+    font-size: 70%;
+  }
+
+  .icons {
+    display: none;
+  }
+
+  .scroll-down {
+    display: none;
+  }
+}
+
+/* ESTO ES PARA UN CELULAR */
+
+@media (max-width: 768px) {
+  .menu-icon-action {
+    display: block;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  .hero-text {
+    text-align: center;
+    padding-top: 100px;
+  }
+
+  .hero-img img {
+    margin: 0;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    height: 100%;
+  }
+
+  .navlist {
+    position: absolute;
+    top: 100%;
+    right: -100%; /* truco para esconder el nav hasta clickear el menú */
+    width: 120px;
+    height: 140px;
+    background-color: #21383def;
+    display: flex; /* para que se comporte como otra cosa */
+    flex-direction: column; /* se comporta como columna */
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    transition: all 0.5s ease-out;
+  }
+
+  .navlist a {
+    display: block;
+    margin: 7px 0;
+  }
+
+  *#menu-toggle:checked + label.menu-icon-action + ul {
+    top: 60px;
+    right: 0;
+  }
+}

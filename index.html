@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Título de la landing page -->
+    <title>Trabajo final HTML + CSS - Alfredo Chalabe</title>
+    <!-- Link al archivo css -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Importación de librerías de íconos -->
+    <!-- https://boxicons.com -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+
+    <!-- https://remixicon.com -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- Links a las fonts de Google Roboto Mono y Libre Baskerville-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Sección cabecera de la web: logo + barra de navegación -->
+    <header>
+      <!-- LOGO -->
+      <a href="#" class="logo">ALFREDO CHALABE</a>
+
+      <!-- TRUCO para botón menú responsive sin JS -->
+      <input type="checkbox" name="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon-action">
+        <!-- Linkeamos el ícono y cambiamos la i por div para una correcta semántica -->
+        <div class='bx bx-menu' id="menu-icon"></div>
+      </label>
+
+      <ul class="navlist">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About me</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+    <!-- Section HERO: suele contener elementos visuales atractivos con un mensaje
+         principal y CTAs para captar la atención en forma inmediata -->
+    
+    <section class="hero">
+      <div class="hero-text">
+        <h5>Data Analyst & Certified Developer</h5>
+        <h4>Python + SQL & ReactJS</h4>
+        <h1>Alfredo Chalabe</h1>
+        <p>
+          
+          Profesional versátil que combina una amplia experiencia en <b>liderazgo de operaciones 
+          <br>
+          comerciales y de servicios</b> con aplicación de tecnologías
+          de <b>análisis de datos</b> y <b>desarrollo web</b>.       
+          <br>
+          En <b>constante aprendizaje</b>,  siempre!
+                     
+        </p>
+
+        <a href="#"><!--<i class="ri-award-line">--></i>CV</a>
+        <a href="#" class="portfolio"><i class="ri-briefcase-fill"></i>Portfolio</a>
+
+      </div>
+
+      <div class="hero-img">
+        <img src="/assets/img/foto2.png" alt="foto Alfredo"
+
+
+
+      </div>
+
+    </section>
+    
+
+    <div class="icons">
+      <a href="https://www.linkedin.com/in/alfredo-chalabe/" target="_blank"><i class="ri-linkedin-fill"></i></a>
+      <a href="https://github.com/Beethoven9" target="_blank"><i class="ri-github-fill"></i></a>
+      
+    </div>
+
+    <div class="scroll-down">
+      <a href="#"><i class="ri-arrow-down-s-fill"></i></a>
+    </div>
+    
+    
+    
+  </body>
+</html>
